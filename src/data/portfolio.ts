@@ -44,6 +44,7 @@ export type Project = {
 
 export const profile = {
   name: '제민기',
+  photo: 'images/profile.jpg',
   role: 'Backend · AI Engineer',
   headline: 'AI가 실패해도 서비스는 멈추지 않게, 끝까지 설계하는 엔지니어',
   email: 'jmkk9345@naver.com',

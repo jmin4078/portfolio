@@ -8,6 +8,7 @@ export default function Home() {
       <main>
         <section className="hero">
           <div className="hero__id">
+            <img className="hero__photo" src={profile.photo} alt={`${profile.name} 사진`} width={140} height={186} />
             <p className="hero__role">{profile.role}</p>
             <h1 className="hero__name">{profile.name}</h1>
             <p className="hero__headline">{profile.headline}</p>
