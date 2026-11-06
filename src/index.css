@@ -31,7 +31,7 @@ img { max-width: 100%; display: block; }
 .header__nav a:hover { color: var(--ink); }
 
 /* Home hero */
-.hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; padding: 64px 0 56px; align-items: center; }
+.hero { padding: 64px 0 56px; }
 .hero__photo { width: 140px; height: 186px; object-fit: cover; border-radius: 16px; border: 1px solid var(--line); box-shadow: 10px 10px 0 var(--chip); margin-bottom: 26px; background: var(--surface); }
 .hero__role { margin: 0; font-size: 14px; font-weight: 700; color: var(--accent); letter-spacing: 0.04em; text-transform: uppercase; }
 .hero__name { margin: 6px 0 10px; font-size: 56px; line-height: 1.1; letter-spacing: -0.03em; }
@@ -39,9 +39,6 @@ img { max-width: 100%; display: block; }
 .hero__links { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip { display: inline-block; padding: 6px 14px; border-radius: 999px; background: var(--chip); font-size: 14px; text-decoration: none; }
 .chip:hover { background: #e2dccb; }
-.hero__intro { list-style: none; margin: 0; padding: 26px 28px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); display: grid; gap: 14px; }
-.hero__intro li { padding-left: 18px; position: relative; font-size: 16px; }
-.hero__intro li::before { content: ''; position: absolute; left: 0; top: 0.65em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 
 /* Sections */
 .section { padding: 28px 0 40px; }
@@ -113,7 +110,7 @@ img { max-width: 100%; display: block; }
 .ts__step { background: #faf8f2; border-radius: 12px; padding: 14px 16px; }
 .ts__step h4 { margin: 0 0 6px; font-size: 14px; }
 .ts__step p { margin: 0 0 6px; font-size: 14.5px; color: var(--sub); }
-.ts .figure { padding: 10px; margin-bottom: 4px; }
+.ts .figure { padding: 10px; margin-bottom: 14px; }
 
 .review { margin: 0; padding-left: 20px; display: grid; gap: 10px; color: var(--sub); }
 
@@ -124,7 +121,7 @@ img { max-width: 100%; display: block; }
 .footer { padding: 28px 0 40px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
 
 @media (max-width: 860px) {
-  .hero, .split, .phero { grid-template-columns: 1fr; gap: 28px; }
+  .split, .phero { grid-template-columns: 1fr; gap: 28px; }
   .hero { padding: 40px 0; }
   .hero__name { font-size: 42px; }
   .cards, .features, .ts__steps { grid-template-columns: 1fr; }

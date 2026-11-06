@@ -2,33 +2,37 @@ import Header from '../components/Header'
 import { projects, type Project, type Troubleshooting } from '../data/portfolio'
 
 function TroubleshootingBlock({ t, index }: { t: Troubleshooting; index: number }) {
-  const steps: [string, string[]][] = [
-    ['문제 상황', t.problem],
-    ['선택한 방법과 이유', t.method],
-    ['구현 · 검증 결과', t.implementation],
-    ['남은 한계', t.limits],
-  ]
+  const renderSteps = (steps: [string, string[]][]) => (
+    <div className="ts__steps">
+      {steps.map(([label, lines]) => (
+        <section key={label} className="ts__step">
+          <h4>{label}</h4>
+          {lines.map((line) => (
+            <p key={line}>{line}</p>
+          ))}
+        </section>
+      ))}
+    </div>
+  )
   return (
     <article className="ts">
       <h3 className="ts__title">
         <span className="ts__no">Trouble Shooting {index + 1}</span>
         {t.title}
       </h3>
-      <div className="ts__steps">
-        {steps.map(([label, lines]) => (
-          <section key={label} className="ts__step">
-            <h4>{label}</h4>
-            {lines.map((line) => (
-              <p key={line}>{line}</p>
-            ))}
-          </section>
-        ))}
-      </div>
+      {renderSteps([
+        ['문제 상황', t.problem],
+        ['선택한 방법과 이유', t.method],
+      ])}
       {t.diagram && (
         <figure className="figure">
           <img src={t.diagram.src} alt={t.diagram.alt} loading="lazy" />
         </figure>
       )}
+      {renderSteps([
+        ['구현 · 결과', t.implementation],
+        ['남은 한계', t.limits],
+      ])}
     </article>
   )
 }

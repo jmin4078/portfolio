@@ -19,11 +19,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <ul className="hero__intro">
-            {profile.intro.map((line) => (
-              <li key={line}>{line}</li>
-            ))}
-          </ul>
         </section>
 
         <section className="section" aria-labelledby="projects-title">
