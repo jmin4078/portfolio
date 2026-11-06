@@ -1,5 +1,4 @@
 import Header from '../components/Header'
-import CodeBlock from '../components/CodeBlock'
 import { projects, type Project, type Troubleshooting } from '../data/portfolio'
 
 function TroubleshootingBlock({ t, index }: { t: Troubleshooting; index: number }) {
@@ -30,7 +29,6 @@ function TroubleshootingBlock({ t, index }: { t: Troubleshooting; index: number 
           <img src={t.diagram.src} alt={t.diagram.alt} loading="lazy" />
         </figure>
       )}
-      {t.code && <CodeBlock sample={t.code} />}
     </article>
   )
 }
@@ -103,7 +101,6 @@ export default function ProjectPage({ project }: { project: Project }) {
                   </div>
                 ))}
               </div>
-              {group.code && <CodeBlock sample={group.code} />}
             </div>
           ))}
         </section>
