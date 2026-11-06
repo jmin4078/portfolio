@@ -41,9 +41,10 @@ export const profile = {
   email: 'jmkk9345@naver.com',
   github: 'https://github.com/jmin4078',
   intro: [
-    '숫자 계산·검증은 서버가, 문장 작성은 AI가 맡도록 나누고, 평가 문항으로 프롬프트 개선 효과와 부작용을 함께 측정합니다.',
-    '결제사 응답이 끊겨도 중복 주문 방지 키와 후처리 배치로 주문·재고·결제 상태를 맞춥니다.',
-    '팀 프로젝트 3회 중 2회(BaroHae, Packing) 팀장을 맡았습니다.',
+    'GRAB에서 주문·결제를 맡아 중복 주문 방지, 재고 선점, 10초마다 도는 결제 후처리 배치를 구현했습니다. 결제사 응답이 끊겨 승인된 결제의 돈이 묶이던 문제를 배치 순서를 바꾸고 자동 환불을 넣어 해결했습니다.',
+    'GRAB 수요 분석과 BaroHae 작업자 추천에서 숫자는 서버가 계산하고 AI는 설명 문장만 쓰게 했습니다. AI 설명 속 숫자가 서버 계산값과 다르면 설명을 버리도록 검증했습니다.',
+    'BaroHae AI 업무 초안을 평가 문항 29개로 3회씩 측정해 프롬프트 인젝션 차단율을 86.7%에서 100%로 올렸고, 그 과정에서 새로 생긴 민감정보 노출 1건을 찾아냈습니다.',
+    'BaroHae·Packing에서 팀장을 맡으면서 직접 백엔드·UI 총괄(BaroHae)과 로그인·커뮤니티·AI 일정 API 첫 버전(Packing)을 구현했습니다.',
   ],
 }
 
@@ -99,7 +100,6 @@ export const projects: Project[] = [
     ],
     diagrams: [
       { src: 'images/arch-grab.png', alt: 'GRAB 시스템 아키텍처', caption: '시스템 아키텍처 · 주황색이 직접 구현한 부분, 회색은 팀원 담당·외부 서비스' },
-      { src: 'images/grab-erd.png', alt: 'GRAB ERD', caption: 'ERD 주요 테이블 · 주황색이 담당 테이블' },
     ],
     troubleshooting: [
       {
